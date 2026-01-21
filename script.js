@@ -68,7 +68,46 @@ const contactForm = document.querySelector('[data-contact-form]');
 if (contactForm) {
   contactForm.addEventListener('submit', (event) => {
     event.preventDefault();
+
     let isValid = true;
+    const fields = contactForm.querySelectorAll('input[required], textarea[required]');
+
+    fields.forEach((field) => {
+      const error = field.parentElement?.querySelector('.error');
+
+      if (!field.value.trim()) {
+        isValid = false;
+        if (error) error.textContent = 'This field is required.';
+        field.setAttribute('aria-invalid', 'true');
+        return;
+      }
+
+      if (field.type === 'email') {
+        const isEmailValid = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(field.value);
+        if (!isEmailValid) {
+          isValid = false;
+          if (error) error.textContent = 'Enter a valid email address.';
+          field.setAttribute('aria-invalid', 'true');
+          return;
+        }
+      }
+
+      if (error) error.textContent = '';
+      field.removeAttribute('aria-invalid');
+    });
+
+    const success = contactForm.querySelector('.form-success');
+
+    if (!isValid) {
+      if (success) success.textContent = '';
+      return;
+    }
+
+    // ✅ Valid: allow the normal HTML form POST to Formspree.
+    if (success) success.textContent = 'Sending…';
+    contactForm.submit(); // Formspree will handle redirect if _redirect is present
+  });
+}
 
     const fields = contactForm.querySelectorAll('input[required], textarea[required]');
     fields.forEach((field) => {
