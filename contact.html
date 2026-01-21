@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Contact — Foggy Websites</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="site-header" id="top">
+    <div class="container nav-wrapper">
+      <a class="logo" href="index.html">Foggy Websites</a>
+      <nav class="main-nav" aria-label="Primary">
+        <a href="index.html">Home</a>
+        <a href="services.html">Services</a>
+        <a href="pricing.html">Pricing</a>
+        <a href="work.html">Work</a>
+        <a href="about.html">About</a>
+        <a href="contact.html" aria-current="page">Contact</a>
+      </nav>
+      <a class="btn btn-primary" href="contact.html">Get a quote</a>
+      <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="mobile-menu">
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div class="mobile-menu" id="mobile-menu" hidden>
+      <a href="index.html">Home</a>
+      <a href="services.html">Services</a>
+      <a href="pricing.html">Pricing</a>
+      <a href="work.html">Work</a>
+      <a href="about.html">About</a>
+      <a href="contact.html" aria-current="page">Contact</a>
+      <a class="btn btn-primary" href="contact.html">Get a quote</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-hero">
+      <div class="container">
+        <p class="eyebrow">Contact</p>
+        <h1>Let’s talk about your next website.</h1>
+        <p class="lead">Share a few details and we’ll follow up with a simple plan and timeline.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container contact-grid">
+        <div class="contact-card reveal">
+          <h2>Contact details</h2>
+          <p>Email: <a href="mailto:foggydewhurst@icloud.com">foggydewhurst@icloud.com</a></p>
+          <p>Phone/WhatsApp: <a href="tel:07496346640">07496346640</a></p>
+          <p class="note">Hosting and domain costs are paid directly by the client to their provider.</p>
+        </div>
+        <form class="contact-form reveal" data-contact-form novalidate>
+          <div class="form-field">
+            <label for="name">Name</label>
+            <input id="name" name="name" type="text" required />
+            <span class="error" aria-live="polite"></span>
+          </div>
+          <div class="form-field">
+            <label for="email">Email</label>
+            <input id="email" name="email" type="email" required />
+            <span class="error" aria-live="polite"></span>
+          </div>
+          <div class="form-field">
+            <label for="project">Project details</label>
+            <textarea id="project" name="project" rows="5" required></textarea>
+            <span class="error" aria-live="polite"></span>
+          </div>
+          <div class="form-field checkbox-field">
+            <label>
+              <input type="checkbox" name="support" />
+              I’m interested in Running Support
+            </label>
+          </div>
+          <button class="btn btn-primary" type="submit">Send enquiry</button>
+          <p class="form-success" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <a class="logo" href="index.html">Foggy Websites</a>
+        <p>Clean, premium websites that feel effortless to use.</p>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <p><a href="mailto:foggydewhurst@icloud.com">foggydewhurst@icloud.com</a></p>
+        <p><a href="tel:07496346640">07496346640</a></p>
+      </div>
+      <div>
+        <h4>Explore</h4>
+        <ul>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="pricing.html">Pricing</a></li>
+          <li><a href="work.html">Work</a></li>
+          <li><a href="about.html">About</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <p>© 2024 Foggy Websites. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

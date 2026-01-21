@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Pricing — Foggy Websites</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="site-header" id="top">
+    <div class="container nav-wrapper">
+      <a class="logo" href="index.html">Foggy Websites</a>
+      <nav class="main-nav" aria-label="Primary">
+        <a href="index.html">Home</a>
+        <a href="services.html">Services</a>
+        <a href="pricing.html" aria-current="page">Pricing</a>
+        <a href="work.html">Work</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <a class="btn btn-primary" href="contact.html">Get a quote</a>
+      <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="mobile-menu">
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div class="mobile-menu" id="mobile-menu" hidden>
+      <a href="index.html">Home</a>
+      <a href="services.html">Services</a>
+      <a href="pricing.html" aria-current="page">Pricing</a>
+      <a href="work.html">Work</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+      <a class="btn btn-primary" href="contact.html">Get a quote</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-hero">
+      <div class="container">
+        <p class="eyebrow">Pricing</p>
+        <h1>Simple pricing that keeps you in control.</h1>
+        <p class="lead">Choose a support plan or take full ownership with a website handover. Hosting and domain costs are paid directly to your chosen provider.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="toggle-row" role="group" aria-label="Pricing options">
+          <span>Support</span>
+          <label class="toggle">
+            <input type="checkbox" id="pricing-toggle" aria-label="Toggle between support and handover" />
+            <span class="toggle-slider"></span>
+          </label>
+          <span>Handover</span>
+        </div>
+
+        <div class="pricing-layout" data-pricing>
+          <article class="card highlight reveal">
+            <h2>Website Build</h2>
+            <p class="price">£500 <span>one-time</span></p>
+            <ul>
+              <li>Design and development</li>
+              <li>Responsive and accessible</li>
+              <li>Launch-ready delivery</li>
+            </ul>
+          </article>
+
+          <article class="card reveal support-only">
+            <h2>Running Support</h2>
+            <p class="price">£15 <span>/month</span></p>
+            <ul>
+              <li>Includes 2 tweaks per month</li>
+              <li>£10/hour beyond the two tweaks</li>
+              <li>Priority response time</li>
+            </ul>
+          </article>
+
+          <article class="card reveal handover-only">
+            <h2>Full Website Handover</h2>
+            <p class="price">£0 <span>/month</span></p>
+            <ul>
+              <li>No monthly fees</li>
+              <li>Full access to files</li>
+              <li>Simple update guide</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section alt">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">FAQ</p>
+          <h2>Pricing questions, answered.</h2>
+        </div>
+        <div class="accordion" data-accordion>
+          <div class="accordion-item">
+            <button class="accordion-trigger" aria-expanded="false">What’s included in the build fee?</button>
+            <div class="accordion-panel" hidden>
+              <p>The £500 Website Build covers strategy, design, development, and launch-ready setup.</p>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <button class="accordion-trigger" aria-expanded="false">Do you handle hosting?</button>
+            <div class="accordion-panel" hidden>
+              <p>Hosting and domain costs are paid directly by the client to the provider of their choice.</p>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <button class="accordion-trigger" aria-expanded="false">Can I switch plans later?</button>
+            <div class="accordion-panel" hidden>
+              <p>Yes. You can move from Running Support to a full handover whenever you’re ready.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <a class="logo" href="index.html">Foggy Websites</a>
+        <p>Clean, premium websites that feel effortless to use.</p>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <p><a href="mailto:foggydewhurst@icloud.com">foggydewhurst@icloud.com</a></p>
+        <p><a href="tel:07496346640">07496346640</a></p>
+      </div>
+      <div>
+        <h4>Explore</h4>
+        <ul>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="pricing.html">Pricing</a></li>
+          <li><a href="work.html">Work</a></li>
+          <li><a href="about.html">About</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <p>© 2024 Foggy Websites. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
