@@ -63,7 +63,6 @@ if (pricingToggle && pricingLayout) {
   updatePricingState();
   pricingToggle.addEventListener('change', updatePricingState);
 }
-
 const contactForm = document.querySelector('[data-contact-form]');
 if (contactForm) {
   contactForm.addEventListener('submit', (event) => {
@@ -103,45 +102,11 @@ if (contactForm) {
       return;
     }
 
-    // ✅ Valid: allow the normal HTML form POST to Formspree.
+    // Submit to Formspree normally (so _redirect works)
     if (success) success.textContent = 'Sending…';
-    contactForm.submit(); // Formspree will handle redirect if _redirect is present
+    contactForm.submit();
   });
 }
-
-    const fields = contactForm.querySelectorAll('input[required], textarea[required]');
-    fields.forEach((field) => {
-      const error = field.parentElement?.querySelector('.error');
-      if (!field.value.trim()) {
-        isValid = false;
-        if (error) error.textContent = 'This field is required.';
-        field.setAttribute('aria-invalid', 'true');
-      } else if (field.type === 'email') {
-        const isEmailValid = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(field.value);
-        if (!isEmailValid) {
-          isValid = false;
-          if (error) error.textContent = 'Enter a valid email address.';
-          field.setAttribute('aria-invalid', 'true');
-        } else {
-          if (error) error.textContent = '';
-          field.removeAttribute('aria-invalid');
-        }
-      } else {
-        if (error) error.textContent = '';
-        field.removeAttribute('aria-invalid');
-      }
-    });
-
-    const success = contactForm.querySelector('.form-success');
-    if (isValid) {
-      if (success) success.textContent = 'Thanks! Your message is ready to send.';
-      contactForm.reset();
-    } else if (success) {
-      success.textContent = '';
-    }
-  });
-}
-
 const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 const smoothLinks = document.querySelectorAll('a[href^="#"]');
 smoothLinks.forEach((link) => {
