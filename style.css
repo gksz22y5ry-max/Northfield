@@ -37,13 +37,18 @@ textarea:focus-visible {
   outline-offset: 2px;
 }
 
-img {
+img,
+video,
+iframe {
   max-width: 100%;
+  height: auto;
   display: block;
 }
 
 .container {
-  width: min(1120px, 90%);
+  width: 100%;
+  max-width: 1120px;
+  padding: 0 5%;
   margin: 0 auto;
 }
 
@@ -518,7 +523,7 @@ textarea {
   display: none;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 900px) {
   .main-nav {
     display: flex;
   }
@@ -562,6 +567,49 @@ textarea {
 
   .footer-grid {
     grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 900px) {
+  .hero {
+    padding: 4.5rem 0 3.5rem;
+  }
+
+  .hero-text h1 {
+    font-size: clamp(2.2rem, 6vw, 3rem);
+  }
+
+  .lead {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 600px) {
+  :root {
+    font-size: 15px;
+  }
+
+  .hero {
+    padding: 4rem 0 3rem;
+  }
+
+  .hero-actions,
+  .cta {
+    width: 100%;
+  }
+
+  .hero-actions .btn,
+  .cta .btn {
+    width: 100%;
+  }
+
+  .section {
+    padding: 3.5rem 0;
+  }
+
+  .page-hero h1,
+  .section-heading h2 {
+    font-size: 1.75rem;
   }
 }
 
